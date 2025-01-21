@@ -18,6 +18,18 @@ class Bot:
         self.client = OpenAI(api_key=openai_apikey)
 
 
+    # Start Documentation 
+    # This function is used to chat with the bot
+    # The function takes a prompt and a system role content as input
+    # It returns the bot's response as a string
+    # Start Documentation
+    """
+    This function is used to chat with the bot
+    Parameters:
+    prompt (string): The message that the user sends to the bot
+    system_role_content (string): The system role content that the bot should use
+    
+    """
 
     def chat(self, prompt, system_role_content = DEFAULT_SYSTEM_ROLE):
        
