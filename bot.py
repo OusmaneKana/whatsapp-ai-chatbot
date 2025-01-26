@@ -18,11 +18,6 @@ class Bot:
         self.client = OpenAI(api_key=openai_apikey)
 
 
-    # Start Documentation 
-    # This function is used to chat with the bot
-    # The function takes a prompt and a system role content as input
-    # It returns the bot's response as a string
-    # Start Documentation
     """
     This function is used to chat with the bot
     Parameters:
