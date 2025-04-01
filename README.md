@@ -1,17 +1,17 @@
-# 📞 Birane Lodge WhatsApp Booking Assistant
+# 🤖 WhatsApp AI Assistant
 
-This is an AI-powered WhatsApp assistant built for **Birane Lodge**, a beautiful Airbnb located near Blaise Diagne International Airport in **Diass, Senegal**. The assistant handles **guest inquiries**, **onboarding**, and **basic support** through WhatsApp using **Twilio**, **MongoDB**, and **OpenAI**.
+This is a smart, AI-powered WhatsApp assistant built with **Flask**, **Twilio**, **MongoDB**, and **OpenAI**. It can onboard new users, manage sessions, handle customer service requests, and escalate conversations to human agents when needed — all through WhatsApp.
 
 ---
 
 ## 🧠 Features
 
-- 🤖 **AI Chat Assistant** powered by ChatGPT (OpenAI)
-- 📱 **WhatsApp Integration** via Twilio
-- 🧾 **Customer Onboarding** (first name, last name, email)
-- 🗣️ **Multi-language Human Escalation** (English, French, Wolof, Japanese)
-- 📦 **MongoDB for session tracking** and chat history
-- 🔐 Config-based setup for secure deployment
+- 💬 **AI Conversations** powered by OpenAI (ChatGPT)
+- 📱 **WhatsApp Integration** using Twilio
+- 🧾 **Smart Onboarding** (captures user info like name and email)
+- 🗣️ **Escalation to Human Staff** based on intent or unknown queries
+- 📦 **Session Persistence** using MongoDB
+- 🔐 Secure setup via `.ini` configuration
 
 ---
 
@@ -19,10 +19,10 @@ This is an AI-powered WhatsApp assistant built for **Birane Lodge**, a beautiful
 
 - **Python 3.10+**
 - **Flask** – Web framework
-- **Twilio** – WhatsApp messaging integration
-- **MongoDB Atlas** – Cloud-based database
-- **OpenAI** – ChatGPT integration
-- **ConfigParser** – For clean API key management
+- **Twilio** – WhatsApp messaging API
+- **MongoDB Atlas** – Cloud database
+- **OpenAI** – ChatGPT for intelligent responses
+- **ConfigParser** – Manages API keys and credentials
 
 ---
 
@@ -31,5 +31,5 @@ This is an AI-powered WhatsApp assistant built for **Birane Lodge**, a beautiful
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/birane-lodge-assistant.git
-cd birane-lodge-assistant
+git clone https://github.com/yourusername/whatsapp-ai-assistant.git
+cd whatsapp-ai-assistant
