@@ -33,12 +33,12 @@ This is a smart, AI-powered WhatsApp assistant built with **Flask**, **Twilio**,
 ```bash
 git clone https://github.com/yourusername/whatsapp-ai-assistant.git
 cd whatsapp-ai-assistant
-
+```
 ### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
-
+```
 ### 3. Configure Your .ini File
 Create a config.ini file in the root directory with the following format:
 
@@ -54,3 +54,4 @@ PASSWORD=your_mongodb_password
 TWILIO_ACCOUNT_SID=your_twilio_sid
 TWILIO_AUTH_TOKEN=your_twilio_auth
 TWILIO_NUMBER=whatsapp:+your_twilio_number
+```
