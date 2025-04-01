@@ -55,3 +55,17 @@ TWILIO_ACCOUNT_SID=your_twilio_sid
 TWILIO_AUTH_TOKEN=your_twilio_auth
 TWILIO_NUMBER=whatsapp:+your_twilio_number
 ```
+
+## 📩 Webhook Configuration
+In your Twilio Console, set your WhatsApp number's webhook to the link of your deploy server.
+
+## Project Structure
+```
+.
+├── bot.py                     # Handles OpenAI chat logic
+├── app.py                     # Main Flask server
+├── config.ini                 # Configuration file (excluded from Git)
+├── requirements.txt           # Project dependencies
+└── README.md                  # You're here
+```
+
