@@ -18,7 +18,7 @@ This is a smart, AI-powered WhatsApp assistant built with **Flask**, **Twilio**,
 ## 🛠️ Tech Stack
 
 - **Python 3.10+**
-- **Flask** – Web framework
+- **FastAPI** – Web framework
 - **Twilio** – WhatsApp messaging API
 - **MongoDB Atlas** – Cloud database
 - **OpenAI** – ChatGPT for intelligent responses
