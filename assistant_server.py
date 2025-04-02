@@ -5,16 +5,34 @@ from twilio.rest import Client as TwilioClient
 import openai
 import os
 import time
+import configparser
 
 app = FastAPI()
 
 # Environment variables or config
-openai.api_key = os.getenv("OPENAI_API_KEY")
-assistant_id = os.getenv("ASSISTANT_ID")
-twilio_client = TwilioClient(os.getenv("TWILIO_SID"), os.getenv("TWILIO_AUTH_TOKEN"))
+ENV = os.getenv("APP_ENV", "DEV")  # Defaults to DEV if not set
+if ENV == "DEV":
+    config = configparser.ConfigParser()
+    config.read("config.ini")
+
+    openai_api_key = config["OPENAI"]["APIKEY"]
+    assistant_id = config["OPENAI"]["ASSISTANT_ID"]
+    twilio_sid = config["TWILLIO"]["TWILIO_ACCOUNT_SID"]
+    twilio_auth_token = config["TWILLIO"]["TWILIO_AUTH_TOKEN"]
+    mongo_client = MongoClient(config["MONGODB"]["MONGODB_URI"])
+else:
+    openai_api_key = os.getenv("OPENAI_API_KEY")
+    assistant_id = os.getenv("OPENAI_ASSISTANT_ID")
+    twilio_sid = os.getenv("TWILIO_SID")
+    twilio_auth_token = os.getenv("TWILIO_AUTH_TOKEN")
+    mongo_client = MongoClient(os.getenv("MONGODB_URI"))
+
 
 # MongoDB setup
-mongo_client = MongoClient(os.getenv("MONGODB_URI"))
+
+openai.api_key=openai_api_key
+twilio_client = TwilioClient(twilio_sid, twilio_auth_token)
+
 db = mongo_client["Birane"]
 threads_collection = db["openai_threads"]
 
